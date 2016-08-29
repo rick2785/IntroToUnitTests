@@ -12,7 +12,9 @@
 		20156CE81D73E568002C47D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20156CE61D73E568002C47D6 /* Main.storyboard */; };
 		20156CEA1D73E568002C47D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20156CE91D73E568002C47D6 /* Assets.xcassets */; };
 		20156CED1D73E568002C47D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20156CEB1D73E568002C47D6 /* LaunchScreen.storyboard */; };
-		20156CF81D73E568002C47D6 /* IntroToUnitTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20156CF71D73E568002C47D6 /* IntroToUnitTestsTests.swift */; };
+		20156D031D73EFD4002C47D6 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20156D021D73EFD4002C47D6 /* ViewControllerTests.swift */; };
+		20156D091D73F751002C47D6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20156D081D73F751002C47D6 /* Person.swift */; };
+		20156D0C1D73F784002C47D6 /* personTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20156D0B1D73F784002C47D6 /* personTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +36,10 @@
 		20156CEC1D73E568002C47D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20156CEE1D73E568002C47D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20156CF31D73E568002C47D6 /* IntroToUnitTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntroToUnitTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20156CF71D73E568002C47D6 /* IntroToUnitTestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroToUnitTestsTests.swift; sourceTree = "<group>"; };
 		20156CF91D73E568002C47D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20156D021D73EFD4002C47D6 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		20156D081D73F751002C47D6 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		20156D0B1D73F784002C47D6 /* personTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		20156CE11D73E567002C47D6 /* IntroToUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				20156D041D73F717002C47D6 /* Model */,
 				20156CE21D73E567002C47D6 /* AppDelegate.swift */,
 				20156CE41D73E567002C47D6 /* ViewController.swift */,
 				20156CE61D73E568002C47D6 /* Main.storyboard */,
@@ -90,10 +95,19 @@
 		20156CF61D73E568002C47D6 /* IntroToUnitTestsTests */ = {
 			isa = PBXGroup;
 			children = (
-				20156CF71D73E568002C47D6 /* IntroToUnitTestsTests.swift */,
 				20156CF91D73E568002C47D6 /* Info.plist */,
+				20156D021D73EFD4002C47D6 /* ViewControllerTests.swift */,
+				20156D0B1D73F784002C47D6 /* personTests.swift */,
 			);
 			path = IntroToUnitTestsTests;
+			sourceTree = "<group>";
+		};
+		20156D041D73F717002C47D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20156D081D73F751002C47D6 /* Person.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +168,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 89JY6GM8WJ;
 						DevelopmentTeamName = "Rickey Hrabowskie (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 20156CDE1D73E567002C47D6;
 					};
@@ -203,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20156D091D73F751002C47D6 /* Person.swift in Sources */,
 				20156CE51D73E567002C47D6 /* ViewController.swift in Sources */,
 				20156CE31D73E567002C47D6 /* AppDelegate.swift in Sources */,
 			);
@@ -212,7 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20156CF81D73E568002C47D6 /* IntroToUnitTestsTests.swift in Sources */,
+				20156D0C1D73F784002C47D6 /* personTests.swift in Sources */,
+				20156D031D73EFD4002C47D6 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,10 +378,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IntroToUnitTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickeyHrabowskie.IntroToUnitTestsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntroToUnitTests.app/IntroToUnitTests";
 			};
@@ -374,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IntroToUnitTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickeyHrabowskie.IntroToUnitTestsTests;
